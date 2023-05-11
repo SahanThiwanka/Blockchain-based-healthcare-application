@@ -1,0 +1,27 @@
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const Web3 = require('web3');
+const compiledContract = require('./build/contracts/Record.json');
+
+const provider = new HDWalletProvider(
+  'jacket give extra material motion elder shock again scene nose urge slush',  // Replace with your own mnemonic phrase
+  'https://goerli.infura.io/v3/2997405c39e34d0f93ede9a9da3c5368'  // Replace with your own Infura project ID
+);
+
+const web3 = new Web3(provider);
+
+const deploy = async () => {
+  try {
+    const accounts = await web3.eth.getAccounts();
+    console.log('Attempting to deploy from account', accounts[0]);
+
+    const contract = await new web3.eth.Contract(JSON.parse(compiledContract.interface))
+      .deploy({ data: compiledContract.bytecode })
+      .send({ gas: '1000000', from: accounts[0] });
+
+    console.log('Contract deployed to', contract.options.address);
+  } catch (error) {
+    console.error('Error deploying contract:', error.message);
+  }
+}
+
+deploy();

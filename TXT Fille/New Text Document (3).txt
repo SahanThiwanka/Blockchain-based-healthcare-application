@@ -1,0 +1,33 @@
+const fs = require('fs');
+require('dotenv').config();
+const {MNEMONIC, PROJECT_ID} = process.env;
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+module.exports = {
+  // contracts_build_directory: "./ethereum/build",
+  networks: {
+    goerli: {
+      provider: () => new HDWalletProvider(MNEMONIC, `https://goerli.infura.io/v3/${PROJECT_ID}`),
+      network_id: 5,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    inf_test01_1_goerli: {
+      network_id: 5,
+      gasPrice: 10000000,
+      provider: new HDWalletProvider(fs.readFileSync('f:\\New folder (7)\\a1.env', 'utf-8'), "https://goerli.infura.io/v3/2997405c39e34d0f93ede9a9da3c5368")
+    }
+  },
+  mocha: {},
+  compilers: {
+    solc: {
+      version: "0.6.0",
+      settings: {
+        optimizer: {
+          enabled: false,
+          runs: 200
+        }
+      }
+    }
+  }
+};

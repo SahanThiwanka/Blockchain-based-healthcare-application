@@ -1,0 +1,56 @@
+<h1>necessary</h1>
+
+npm install react-dom --force
+npm i --legacy-peer-deps
+npm audit fix --force
+
+npm install -g node-gyp
+npm install -g truffle
+npx truffle unbox
+npm i
+npx truffle version
+npm i node
+change global compiler version 
+"solidity.compileUsingRemoteVersion": "v0.5.16+commit.3f05b770",
+npm install -g solc
+npx truffle compile
+npx truffle migrate
+truffle migrate --reset
+
+npm install @truffle/contract
+
+todoList = await TodoList.deployed()
+TodoList.address
+
+npm install touch-cli -g  
+npx mkdri src        
+npx touch index.html
+
+npm install light-server
+npm run dev
+"start": "npm run lite",
+"lite" : "lite-server",
+
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+
+
+<h1>unnecessary</h1>
+
+npm uninstall -g truffle
+npm install truffle
+
+
+git init
+git add .
+git commit -am "1. Project Setup"
+http://localhost:7545
+
+0xCb14a294b679E0A6931312bc513426217458570a
+remix id eken infura ekata danna 
+parana solidity code eka remix ide ekata dala balanna
+chat cpt eke gahapuwa waradi eva okkoma solidity 0.6.0 valata danna one ekai aula
+sampurna file eka dounloda karala --legacy-peer-deps eka dala install karanna
+
+
+console.log('input:', input);
+const output = JSON.parse(solc.compile(JSON.stringify(input)));
