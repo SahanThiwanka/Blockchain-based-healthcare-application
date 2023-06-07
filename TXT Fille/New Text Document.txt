@@ -45,11 +45,7 @@ git add .
 git commit -am "1. Project Setup"
 http://localhost:7545
 
-0xCb14a294b679E0A6931312bc513426217458570a
-remix id eken infura ekata danna 
-parana solidity code eka remix ide ekata dala balanna
-chat cpt eke gahapuwa waradi eva okkoma solidity 0.6.0 valata danna one ekai aula
-sampurna file eka dounloda karala --legacy-peer-deps eka dala install karanna
+--legacy-peer-deps
 
 
 console.log('input:', input);
